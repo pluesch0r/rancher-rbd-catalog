@@ -40,6 +40,6 @@
     - false
 rbd-driver:
   storage_driver:
-    name: rancher-rbd
+    name: stubdriver
     scope: environment
     volume_access_mode: singleHostRW
