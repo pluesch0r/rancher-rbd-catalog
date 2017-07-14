@@ -14,6 +14,7 @@ services:
       RBD_POOL: '${RBD_POOL}'
       RBD_USER_NAME: '${RBD_USER_NAME}'
       RBD_SECRET: '${RBD_SECRET}'
+      RBD_FSID: '${RBD_FSID}'
     volumes:
     - /run:/run
     - /var/run:/var/run
