@@ -5,7 +5,6 @@
     Docker volume plugin for Ceph RBD
   minimum_rancher_version: v1.6.0-rc1
   questions:
-    questions:
   - variable: "RBD_MONITOR_IPS"
     description: "IPS of the monitor nodes, separated by commas"
     label: "MON Servers"
