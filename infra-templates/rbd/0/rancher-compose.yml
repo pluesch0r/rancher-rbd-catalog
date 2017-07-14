@@ -25,6 +25,11 @@
     description: "Secret to be used in conjunction with the username to connect to the supplied RBD pool"
     type: "string"
     required: true
+  - variable: "RBD_FSID"
+    label: "RBD FSID"
+    description: "Cluster GUID"
+    type: "string"
+    required: true
   - variable: RANCHER_DEBUG
     label: Debug Mode
     type: enum
