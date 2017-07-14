@@ -5,6 +5,7 @@ services:
     network_mode: host
 #    image: niusmallnan/storage-rbd:dev
     image: stmops/rancher-rbd:latest
+    command: ["start.sh","storage","--driver-name","stubdriver"]
     labels:
       io.rancher.scheduler.global: 'true'
       io.rancher.container.create_agent: 'true'
