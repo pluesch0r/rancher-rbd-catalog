@@ -10,6 +10,10 @@ services:
       io.rancher.container.agent.role: environment
     environment:
       RANCHER_DEBUG: '${RANCHER_DEBUG}'
+      RBD_MONITOR_IPS: '${RBD_MONITOR_IPS}'
+      RBD_POOL: '${RBD_POOL}'
+      RBD_USER_NAME: '${RBD_USER_NAME}'
+      RBD_SECRET: '${RBD_SECRET}'
     volumes:
     - /run:/run
     - /var/run:/var/run
