@@ -20,10 +20,12 @@
     label: "RBD User"
     description: "Name of the user to be used for access (i.e. admin)"
     type: "string"
+    required: true
   - variable: "RBD_SECRET"
     label: "RBD Secret"
     description: "Secret to be used in conjunction with the username to connect to the supplied RBD pool"
     type: "string"
+    required: true
   - variable: RANCHER_DEBUG
     label: Debug Mode
     type: enum
