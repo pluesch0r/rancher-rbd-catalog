@@ -14,6 +14,7 @@
     label: RBD Pool
     description: The pool to be used for images
     type: string
+    default: rbd
     required: true
   - variable: RBD_USER_NAME
     label: RBD User
@@ -25,6 +26,18 @@
     label: RBD Secret
     description: Secret to be used in conjunction with the username to connect to the supplied RBD pool
     type: string
+    required: true
+  - variable: RBD_IMAGE_SIZE
+    label: RBD Image Size
+    description: Default Image size
+    type: string
+    default: 1G
+    required: true
+  - variable: RBD_IMAGE_FEATURE
+    label: RBD Image Feature
+    description: Default image feature that should be enabled
+    type: string
+    default: layering
     required: true
   - variable: RANCHER_DEBUG
     label: Debug Mode
