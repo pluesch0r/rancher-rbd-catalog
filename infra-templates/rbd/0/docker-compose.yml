@@ -3,9 +3,7 @@ services:
   rbd-driver:
     privileged: true
     network_mode: host
-#    image: niusmallnan/storage-rbd:dev
     image: stmops/rancher-rbd:latest
-    command: ["start.sh","storage","--driver-name","stubdriver"]
     labels:
       io.rancher.scheduler.global: 'true'
       io.rancher.container.create_agent: 'true'
@@ -16,12 +14,10 @@ services:
       RBD_POOL: '${RBD_POOL}'
       RBD_USER_NAME: '${RBD_USER_NAME}'
       RBD_SECRET: '${RBD_SECRET}'
-      RBD_FSID: '${RBD_FSID}'
     volumes:
     - /run:/run
     - /var/run:/var/run
     - /dev:/host/dev
-    - /etc/ceph:/etc/ceph
     - /lib/modules:/lib/modules:ro
     - /var/lib/rancher/volumes:/var/lib/rancher/volumes:shared
     logging:
