@@ -3,7 +3,7 @@ services:
   rbd-driver:
     privileged: true
     network_mode: host
-    image: stmops/rancher-rbd:latest
+    image: stmops/rancher-rbd:release-v0.1.0
     labels:
       io.rancher.scheduler.global: 'true'
       io.rancher.container.create_agent: 'true'
