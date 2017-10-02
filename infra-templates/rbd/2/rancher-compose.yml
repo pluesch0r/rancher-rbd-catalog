@@ -1,0 +1,54 @@
+.catalog:
+  name: "Rancher RBD"
+  version: "12.2.1"
+  description: |
+    Docker volume plugin for Ceph RBD (using ceph luminous 12.2.1)
+  minimum_rancher_version: v1.6.0-rc1
+  questions:
+  - variable: RBD_MONITOR_IPS
+    description: IPS of the monitor nodes, separated by commas"
+    label: MON Servers
+    required: true
+    type: string
+  - variable: RBD_POOL
+    label: RBD Pool
+    description: The pool to be used for images
+    type: string
+    default: rbd
+    required: true
+  - variable: RBD_USER_NAME
+    label: RBD User
+    description: Name of the user to be used for access (i.e. admin)
+    type: string
+    default: admin
+    required: true
+  - variable: RBD_SECRET
+    label: RBD Secret
+    description: Secret to be used in conjunction with the username to connect to the supplied RBD pool
+    type: string
+    required: true
+  - variable: RBD_IMAGE_SIZE
+    label: RBD Image Size
+    description: Default Image size
+    type: string
+    default: 1G
+    required: true
+  - variable: RBD_IMAGE_FEATURE
+    label: RBD Image Feature
+    description: Default image feature that should be enabled
+    type: string
+    default: layering
+    required: true
+  - variable: RANCHER_DEBUG
+    label: Debug Mode
+    type: enum
+    description: Enable or disable verbose logging
+    default: false
+    options:
+    - true
+    - false
+rbd-driver:
+  storage_driver:
+    name: rancher-rbd
+    scope: environment
+    volume_access_mode: singleHostRW
